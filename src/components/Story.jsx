@@ -73,7 +73,7 @@ const Story = () => {
             </div>
 
             {/* Konten gambar + teks selang seling */}
-            <Motion.div className={`flex flex-col md:flex-row items-center gap-4 mt-4 ${isEven ? "md:flex-row-reverse" : ""}`} initial="hidden" whileInView="visible" viewport={{ once: false }} variants={fadeUp} custom={0}>
+            <Motion.div className={`flex flex-row items-center gap-4 mt-4 ${isEven ? "flex-row-reverse" : ""}`} initial="hidden" whileInView="visible" viewport={{ once: false }} variants={fadeUp} custom={0}>
               <img src={item.img} alt="Foto Kisah" className="w-1/2 h-40 rounded-md object-cover" />
               <p className="text-gray-500 text-sm text-justify w-1/2">{item.desc}</p>
             </Motion.div>
