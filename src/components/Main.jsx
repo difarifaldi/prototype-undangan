@@ -1,8 +1,21 @@
+import { useEffect, useState } from "react";
 import bgImage from "../assets/img/foto2.jpg";
 import { FaEnvelopeOpenText } from "react-icons/fa";
 import { motion as Motion } from "framer-motion";
 
 const Main = ({ onOpen }) => {
+  const [namaUndangan, setNamaUndangan] = useState("");
+
+  useEffect(() => {
+    const path = window.location.pathname; // contoh: "/prototype-undangan/debi&pasangan"
+    const parts = path.split("/");
+    const lastSegment = parts[parts.length - 1]; // ambil "debi&pasangan"
+
+    // Ganti %20 jadi spasi jika ada
+    const decoded = decodeURIComponent(lastSegment);
+
+    setNamaUndangan(decoded);
+  }, []);
   return (
     <section className="w-full min-h-screen flex flex-col">
       {/* Bagian Gambar dengan Animasi */}
@@ -42,8 +55,8 @@ const Main = ({ onOpen }) => {
         </Motion.p>
 
         {/* Nama undangan */}
-        <Motion.p className="text-xl font-semibold text-amber-700  mt-3" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
-          Nama Undangan
+        <Motion.p className="text-xl font-semibold text-amber-700 mt-3" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1 }}>
+          {namaUndangan || "Nama Undangan"}
         </Motion.p>
 
         {/* Tombol */}
