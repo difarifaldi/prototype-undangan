@@ -7,9 +7,12 @@ const Main = ({ onOpen }) => {
   const [namaUndangan, setNamaUndangan] = useState("");
 
   useEffect(() => {
-    const path = window.location.pathname; // contoh: "/prototype-undangan/debi&pasangan"
+    //const path = window.location.pathname;
+
+    //karena pakai hashrouter di main.jsx
+    const path = window.location.hash;
     const parts = path.split("/");
-    const lastSegment = parts[parts.length - 1]; // ambil "debi&pasangan"
+    const lastSegment = parts[parts.length - 1]; // ambil "namanya"
 
     // Ganti %20 jadi spasi jika ada
     const decoded = decodeURIComponent(lastSegment);
