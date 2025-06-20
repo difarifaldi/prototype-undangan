@@ -23,7 +23,7 @@ const Invitation = () => {
     } else {
       audioRef.current.play();
     }
-    setIsPlaying(!isPlaying);
+    setIsPlaying(!isPlaying); // jika toggle di tekan maka jalankan fungsi sebaliknya, kalo lagi jaaln togle nya untuk mati klo mati untuk jalan
   };
 
   useEffect(() => {
@@ -35,8 +35,10 @@ const Invitation = () => {
           .play()
           .then(() => setIsPlaying(true))
           .catch(() => {});
-        window.removeEventListener("click", playHandler);
+        window.removeEventListener("click", playHandler); // kalau semisal udah di play maka ketika sembarang klik udah ga auto play lagi
       };
+      // ini diluar agar ketika ada audio terus sembarang klik jalankan fungsi playHandler
+      //  lalu kalau berhasil jalan ubah setStte lalu apus klik nya
       window.addEventListener("click", playHandler);
     }
   }, []);

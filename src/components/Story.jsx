@@ -81,7 +81,7 @@ const Story = () => {
         );
       })}
 
-      <div className="w-full rotate-180">
+      <div className="w-full rotate-180 mb-[-1px]">
         <svg className="w-full block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#172554"
