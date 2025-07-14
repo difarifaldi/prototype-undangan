@@ -40,10 +40,10 @@ const Couple = () => {
           <img src={b3} alt="Pria" className="w-full h-full object-cover" />
         </Motion.div>
         <Motion.p className="text-2xl font-playball mt-4 text-gray-800" initial={{ opacity: 0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }} viewport={{ once: false }}>
-          Muhammad Difa Rifaldi
+          Muhammad Difa Rifaldi S.Tr.Kom
         </Motion.p>
         <Motion.p className="text-xs text-gray-400 max-w-[200px] mx-auto mt-2 leading-snug" initial={{ opacity: 0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1 }} viewport={{ once: false }}>
-          Putra Pertama Bapak Satria Fanni & Ibu Dede Triana
+          Putra Pertama Bapak Satria Fanni (Alm) & Ibu Dede Triana
         </Motion.p>
 
         {/* Simbol & */}
@@ -62,10 +62,10 @@ const Couple = () => {
           <img src={b4} alt="Wanita" className="w-full h-full object-cover" />
         </Motion.div>
         <Motion.p className="text-2xl font-playball mt-4 text-gray-800" initial={{ opacity: 0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.6 }} viewport={{ once: false }}>
-          Nazwa Ria Shabrina
+          Nazwa Ria Shabrina S.Pd
         </Motion.p>
         <Motion.p className="text-xs text-gray-400 max-w-[200px] mx-auto mt-2 leading-snug" initial={{ opacity: 0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.8 }} viewport={{ once: false }}>
-          Putri Ketiga Bapak Enup Sanupri & Ibu Khadijah
+          Putri Ketiga Bapak Enup Sanupri (Alm) & Ibu Hj. Khadijah
         </Motion.p>
       </div>
       <Motion.img src={dividing} alt="Daun Kiri" className="w-full my-6" initial={{ opacity: 0, y: -40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 2 }} viewport={{ once: false }} />
